@@ -651,37 +651,3 @@ for i in range(len(arr_amp_max)):
 
 # Nos ultimos 2 meses não existe amplitude térmica superior a 10ºC
 
-
-
-# TAREFA 2
-
-# Faça download para uma pasta local do ficheiro 1131200.json, atualizado regularmente, 
-# que contém a previsão metereológica diária para os próximos 5 dias para a cidade do Porto.
-
-# Leia o ficheiro JSON para uma estrutura de dados Python. Inspecione a estrutura do ficheiro 
-# e repare que é constituído por um cabeçalho e por uma lista de dados de previsões diárias. 
-# Guarde essa lista numa variável previsoes.
-
-# Note que a estrutura da variável previsoes (uma lista de dicionários) é essencialmente uma 
-# tabela (um array 2D com nomes em cada linha/coluna). Como tal, pode ser facilmente convertida 
-# num DataFrame tabela utilizando a biblioteca pandas da seguinte forma.
-
-with open('1131200.json','r') as file:
-    dicionario = json.load(file)
-
-previsoes = dicionario['data']
-
-import pandas as pd
-tabela = pd.DataFrame(previsoes)
-
-# Imprima no ecrã a tabela e inspecione o seu formato e o tipo de cada coluna.
-
-print(type(tabela))
-
-
-# Escreva programas que respondam às seguintes perguntas:
-
-# (a) Qual a temperatura média máxima em dias de chuva (probabilidade de precipitação >= 75%)?
-
-
-
